@@ -12,9 +12,15 @@ namespace converter
 {
     public partial class Form1 : Form
     {
+        V V = new V();
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            V.ShowDialog();
         }
     }
 }
