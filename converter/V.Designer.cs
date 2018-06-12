@@ -36,6 +36,7 @@
             this.outCb = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.outB = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -61,6 +62,7 @@
             this.inCb.FormattingEnabled = true;
             this.inCb.Items.AddRange(new object[] {
             "куб. м",
+            "куб. дм",
             "куб. см",
             "куб. мм"});
             this.inCb.Location = new System.Drawing.Point(118, 43);
@@ -84,18 +86,21 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 5;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // outCb
             // 
             this.outCb.FormattingEnabled = true;
             this.outCb.Items.AddRange(new object[] {
             "куб. м",
+            "куб. дм",
             "куб. см",
             "куб. мм"});
             this.outCb.Location = new System.Drawing.Point(12, 118);
             this.outCb.Name = "outCb";
             this.outCb.Size = new System.Drawing.Size(121, 21);
             this.outCb.TabIndex = 6;
+            this.outCb.SelectedIndexChanged += new System.EventHandler(this.outCb_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -108,7 +113,7 @@
             // 
             // outB
             // 
-            this.outB.Location = new System.Drawing.Point(164, 185);
+            this.outB.Location = new System.Drawing.Point(164, 164);
             this.outB.Name = "outB";
             this.outB.Size = new System.Drawing.Size(108, 32);
             this.outB.TabIndex = 8;
@@ -116,11 +121,22 @@
             this.outB.UseVisualStyleBackColor = true;
             this.outB.Click += new System.EventHandler(this.outB_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(164, 213);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 27);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Очистить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // V
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.outB);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.outCb);
@@ -147,5 +163,6 @@
         private System.Windows.Forms.ComboBox outCb;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button outB;
+        private System.Windows.Forms.Button button1;
     }
 }
